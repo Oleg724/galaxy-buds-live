@@ -1,0 +1,100 @@
+@import '../_variables';
+
+.btn-transparent {
+  background-color: transparent;
+  border-radius: 9px;
+  text-transform: uppercase;
+  cursor: pointer;
+  height: 50px;
+  padding: 10px 0;
+  font-family: 'Samsung One';
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+
+  &--sm {
+    width: 260px;
+
+    &-white {
+      border: 1px solid $white;
+      color: $white;
+    }
+
+    &-black {
+      border: 1px solid $black;
+      color: $black;
+    }
+  }
+}
+
+.btn-wrapper {
+  width: 100%;
+  display: none;
+  justify-content: center;
+  margin: 80px 0 80px 0;
+}
+
+@media screen and (max-width: 1390px) {
+  .btn-transparent {
+    &--sm {
+      width: 395px;
+      height: 90px;
+      font-size: 22px;
+    }
+
+    &--width-sm {
+      width: 345px;
+      height: 90px;
+      font-size: 22px;
+    }
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .btn-transparent {
+    height: 90px;
+    width: 395px;
+
+    &--lg {
+      width: 450px;
+      height: 90px;
+      font-size: 22px;
+    }
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .btn-wrapper {
+    display: flex;
+  }
+
+  .btn-transparent {
+
+    &--width-sm {
+      width: 350px;
+    }
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .btn-transparent {
+
+    &--lg {
+      width: 92%;
+    }
+
+    &--sm {
+      width: 100%;
+    }
+
+    &--width-sm {
+      width: 124%;
+    }
+  }
+}
+
+@media screen and (max-width: 1390px) {
+  .btn-transparent {
+    width: 90%;
+  }
+}

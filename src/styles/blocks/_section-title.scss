@@ -1,0 +1,20 @@
+@import '../_variables';
+
+.title {
+
+  &__title {
+    color: $white;
+    padding-left: 25px;
+    font-size: 26px;
+    font-family: $font-sharp-bold;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .title {
+
+    &__title {
+      font-size: 16px
+    }
+  }
+}

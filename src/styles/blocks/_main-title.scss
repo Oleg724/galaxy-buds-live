@@ -1,0 +1,56 @@
+@import '../_variables';
+
+.main-title {
+  top: calc( #{$section-header-height} + 90px );
+  align-self: flex-start;
+  background-color: $grey-light;
+
+  &__title {
+    color: $black;
+    font-size: 50px;
+    white-space: nowrap;
+    text-align: center;
+    padding-top: 130px;
+    font-family: $font-sharp-bold;
+  }
+
+  &__img {
+    display: block;
+    padding: 35px 0 99px 0;
+    margin: 0 auto;
+    width: calc(100vw - #{$side-width});
+    max-width: 1260px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .main-title {
+
+    &__img {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 720px) {
+
+  .main-title {
+    font-size: 40px;
+
+    &__img {
+      margin-bottom: 55px;
+      padding: 85px 0 0 0;
+    }
+
+    &__title {
+      padding-top: 175px;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  .main-title__title {
+    white-space: initial;
+  }
+}

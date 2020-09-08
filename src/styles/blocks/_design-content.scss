@@ -1,0 +1,39 @@
+@import '../_mixins';
+
+.design-item {
+  @include flex-column;
+
+  &:first-child img {
+    margin: 20px 0 90px 0;
+    width: 57%;
+  }
+
+  &:nth-child(2) img {
+    margin-top: 40px;
+  }
+
+  &:last-child img {
+    margin: 25px 0 47px 0;
+  }
+
+  &__img {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.design-img {
+
+  &__img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .design-item {
+
+    &:nth-child(2) img {
+      margin-bottom: 100px;
+    }
+  }
+}

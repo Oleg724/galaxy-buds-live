@@ -1,0 +1,186 @@
+@import '../variables';
+
+.text {
+  @include flex-column;
+
+  &--half-width {
+    width: 50%;
+  }
+
+  &--margin-top {
+    margin-top: 67px;
+  }
+
+  &--white {
+    margin-top: 100px;
+
+    & span,
+    & p {
+      color: $white;
+    }
+  }
+
+  &__title {
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+}
+
+.description {
+  display: flex;
+  margin-top: 33px;
+
+  &--column {
+    flex-direction: column;
+  }
+
+  &__subtitle {
+    width: 50%;
+    font-size: 30px;
+    font-weight: 700;
+    font-family: $font-sharp-bold;
+
+    & span {
+      display: inline-block;
+      width: 323px;
+    }
+  }
+
+  &__text {
+    width: 50%;
+    font-size: 17px;
+    display: flex;
+
+    &--xsm {
+      width: 26%!important;
+    }
+
+    &--sm {
+      width: 72%!important;
+    }
+
+    &--width-100 {
+      width: 93%!important;
+    }
+    
+    &--md {
+      font-size: 17px;
+      text-transform: uppercase;
+      margin-top: 0px!important;
+    }
+
+    &--padding-left {
+      width: 80%;
+      margin-top: 25px;
+
+
+      & span {
+        line-height: 1.6;
+      }
+    }
+
+    &--wide {
+      width: 424px;
+    }
+  }
+}
+
+.description-wrapper {
+  @include flex-column;
+  margin-top: 19px;
+  width: 35%;
+}
+
+.description-img {
+  width: 100%;
+  text-align: center;
+  margin-top: 90px;
+
+  &__img {
+    width: 72%;
+    margin-right: 81px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .description {
+    &__text {
+
+      &__title {
+        font-size: 28px;
+      }
+      &--xsm {
+        width: initial!important;
+      }
+    }
+
+    &__subtitle {
+      width: 100%;
+
+      & span {
+        font-size: 52px;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .description {
+
+    &__text {
+      &--wide {
+        width: initial;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .description {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 57px;
+
+    &__text {
+      font-size: 32px;
+
+      &--wide {
+        margin-top: 60px;
+        width: 100%;
+      }
+    }
+  }
+
+  .text {
+
+    &--half-width {
+      width: 100%;
+    }
+
+    &--padding-left {
+      margin-top: 60px;
+    }
+  }
+
+  .description-wrapper {
+    @include flex-column;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 0;
+
+    & .description__text--md {
+      margin-top: 30px!important;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .description__subtitle span {
+    font-size: 36px;
+  }
+
+  .description__text {
+    font-size: 19px;
+  }
+}

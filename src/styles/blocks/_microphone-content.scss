@@ -1,0 +1,58 @@
+.microphone-content {
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+
+  &__item {
+    height: 100%;
+    max-width: 1440px;
+
+    &:first-child {
+      position: absolute;
+      left: 20.13%;
+    }
+
+    &:nth-child(2) {
+      display: initial;
+    }
+
+    &:last-child {
+      display: none;
+    }
+  }
+
+  & img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .microphone-content {
+    flex-direction: column;
+
+    &__item {
+      width: 100%;
+
+      &:first-child {
+        align-self: flex-start;
+        width: 100%;
+        position: initial;
+      }
+
+      &:nth-child(2) {
+        display: none;
+      }
+
+      &:last-child {
+        display: initial;
+        align-self: center;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .microphone-content {
+    padding-top: 120px;
+  }
+}
